@@ -95,7 +95,7 @@ function Window:drawIndicator(overrideOpts) -- {{{
 
     -- TODO: Should we really create a new canvas for each window? Or should
     -- there be one canvas per screen/space into which each window's indicator element is appended?
-    self.indicator = hs.canvas.new(self.screenFrame)
+    self.indicator = hs.canvas.new(self.screenFrame):level(hs.drawing.windowLevels.utility)
 
     self.indicator:insertElement({
         type = "rectangle",
